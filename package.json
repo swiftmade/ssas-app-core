@@ -1,0 +1,9 @@
+{
+  "name": "ssas-app-core",
+  "version": "1.0.0",
+  "description": "Core package for SSAS mobile apps",
+  "main": "index.js",
+  "repository": "https://github.com/swiftmade/ssas-app-core",
+  "author": "Imagins",
+  "license": "GNU General Public License v3.0"
+}
