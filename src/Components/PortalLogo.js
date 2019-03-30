@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
-import Images from "../Constants/Images";
 import {Image, StyleSheet} from 'react-native';
+
+import AppCore from "../AppCore";
+import Images from "../Constants/Images";
 
 class PortalLogo extends Component
 {
     render() {
-        return <Image source={Images.logo()} defaultSource={Images.ssas} style={styles.logo} />;
+        return <Image source={Images.logo()}
+          defaultSource={AppCore.get('defaultLaunchLogo')}
+          style={styles.logo} />;
     }
 }
 

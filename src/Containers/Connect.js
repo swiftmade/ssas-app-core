@@ -2,11 +2,11 @@ import { Image } from "react-native";
 import React, { Component } from "react";
 import {NavigationActions} from 'react-navigation';
 
-import Alerts from "../Lib/Alerts"
+import AppCore from "../AppCore";
+import Alerts from "../Lib/Alerts";
 import Text from "../Components/Text";
-import Images from "../Constants/Images";
-import ConnectFlow from '../Flows/ConnectFlow'
-import Container from '../Components/Container'
+import ConnectFlow from "../Flows/ConnectFlow";
+import Container from "../Components/Container";
 
 class Connect extends Component
 {
@@ -18,7 +18,9 @@ class Connect extends Component
     }
 
     async componentDidMount() {
-        await this.connect('fijifsp')
+        if (AppCore.has('domainLock')) {
+            await this.connect(AppCore.get('domainLock'))
+        }
     }
 
     async connect(domain) {
@@ -42,8 +44,8 @@ class Connect extends Component
     
     render() {
         return <Container center>
-            <Image source={Images.ssas} />
-            <Text title>RiskrApps</Text>
+            <Image source={AppCore.get('defaultLaunchLogo')} />
+            <Text title>{AppCore.get('defaultLaunchName')}</Text>
         </Container>
     }
 }

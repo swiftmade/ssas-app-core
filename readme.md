@@ -59,4 +59,15 @@ ln -s ../../../../../node_modules/ssas-enketo/www www
 
 ##### 5. Integrating SSAS App Core with your React Native App
 
+###### Android
+
+First, make sure your `android/app/src/main/AndroidManifest.xml` contains the following permissions:
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
 Rest of the documentation: WIP

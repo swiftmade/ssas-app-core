@@ -1,6 +1,8 @@
-import axios from "axios"
-import Session from "./Session"
-import RNFS from "react-native-fs"
+import axios from "axios";
+import RNFS from "react-native-fs";
+
+import Session from "./Session";
+import AppCore from "../AppCore";
 
 class Api {
     
@@ -13,7 +15,10 @@ class Api {
     }
 
     setDomain(domain) {
-        this.baseUrl = `http://${domain}.riskrapps.net/api/v1`
+        this.baseUrl = AppCore.get('endpoint').replace(
+            '%domain%',
+            domain
+        )
         this._configure()
     }
 
