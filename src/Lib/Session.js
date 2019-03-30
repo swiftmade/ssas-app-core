@@ -67,10 +67,7 @@ class Session {
     }
 
     get(key, def = null) {
-        if ((typeof this.session[key]) === 'undefined') {
-            return def
-        }
-        return this.session[key]
+        return deepGet(this.session, key, def)
     }
 
     async login(credentials) {
@@ -109,6 +106,22 @@ class Session {
     }
 }
 
-
+const deepGet = (object, path, def = null) => {
+    if (path === null) {
+        return object
+    }
+    if (object.hasOwnProperty(path)) {
+        return object[path]
+    }
+    let segments = path.split('.')
+    for (let i = 0; i < segments.length; i++) {
+        let segment = segments[i]
+        if (typeof object !== 'object' || !object.hasOwnProperty(segment)) {
+            return def
+        }
+        object = object[segment]
+    }
+    return object
+}
 
 export default new Session()

@@ -12,6 +12,7 @@ import {NavigationActions} from 'react-navigation'
 
 import {Container, Content, Header, Footer} from 'native-base'
 
+import AppCore from '../AppCore'
 import CurrentUser from '../Components/CurrentUser'
 
 class Menu extends Component {
@@ -144,10 +145,18 @@ class Menu extends Component {
 				<Text style={styles.footerText}>
 					Survey version: {this.state.version}
 				</Text>
+				{this._renderExitButton()}
 			</Footer>
 		</Container>
 	}
-	
+
+	_renderExitButton() {
+		if (AppCore.has('domainLock')) {
+			return null
+		}
+		return <Button link title="Connect to other domain" icon="chevron-circle-left" style={styles.exitButton} onPress={this.exit} />
+	}
+
 	_renderButtons() {
 		const {buttonStyles} = Session.getTheme()
 		const titles = this._buttonTitles()
