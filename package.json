@@ -15,5 +15,8 @@
     "react-native-webview": "^5.4.6",
     "react-native-zip-archive": "^4.0.0",
     "react-navigation": "^1.5.8"
+  },
+  "dependencies": {
+    "ssas-enketo": "^2.0.3"
   }
 }
