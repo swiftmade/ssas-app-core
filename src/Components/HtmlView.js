@@ -24,8 +24,8 @@ class HtmlView extends Component
     }
 
 
-    _handleStateChange(event) {
-        if (event.url.indexOf('/index.html') >= 0) {
+    _handleStateChange({nativeEvent}) {
+        if (nativeEvent.url && nativeEvent.url.indexOf('/index.html') >= 0) {
             this.props.navigation.goBack(null)
         }
     }
@@ -56,7 +56,7 @@ class HtmlView extends Component
         return <View style={{flex:1}}>
                 {this.renderiOSStatusBarMargin()}
                 <CustomWebview source={this.props.source}
-                    onNavigationStateChange={this._handleStateChange.bind(this)}
+                    onLoadStart={this._handleStateChange.bind(this)}
                     onError={() => { this.props.navigation.goBack(null) }}  />
         </View>
     }

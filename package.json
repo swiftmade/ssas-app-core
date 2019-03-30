@@ -17,6 +17,6 @@
     "react-navigation": "^1.5.8"
   },
   "dependencies": {
-    "ssas-enketo": "^2.0.3"
+    "ssas-enketo": "^2.0.4"
   }
 }

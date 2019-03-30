@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-ssas-enketo@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/ssas-enketo/-/ssas-enketo-2.0.3.tgz#f38cd0f0c5af061d690173aad3f35191a67b937c"
-  integrity sha512-QNOP8+8OR9xVV/d6fYuoq9yOM2t0T1zwlgVdSt+SlHYpZaff2OXIQe1zS9xDUknE2psAk64nDIQbqXUFbvhetw==
+ssas-enketo@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/ssas-enketo/-/ssas-enketo-2.0.4.tgz#af821b762e699dbed9a42df9d0aa9ff77e5f5b32"
+  integrity sha512-kAfb5JHRAtYYHVh7+0+zekUPoEXsmzR6oN/J/Ch39fFVTCXVw9ZjT4MSHVva9hb8zPx+w47ZcjHoRjyWUK9ObA==
