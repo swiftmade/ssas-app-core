@@ -18,8 +18,8 @@ App core contains `React Native` code shared across apps that work in tandem wit
 
 > Note: App Core is designed to work with React Native v0.59+.
 
-1. Create a new React Native project.
-2. You must have these packages installed and linked:
+##### 1. Create a new React Native project.
+##### 2. You must have these packages installed and linked:
 
 ```js
 {
@@ -32,6 +32,31 @@ App core contains `React Native` code shared across apps that work in tandem wit
 }
 ```
 
-3. Add this package as a dependency: `yarn add ssas-app-core`
+ Add this package as a dependency:
+
+```bash
+yarn add ssas-app-core
+```
+
+##### 4. Link `ssas-enketo` with your Android and iOS projects.
+
+###### Android
+
+```bash
+# Creates symlink for Android.
+# Run this in the root folder of your project.
+
+cd android/app/src/main/assets
+ln -s ../../../../../node_modules/ssas-enketo/www www
+```
+
+###### iOS
+
+- Open your app's iOS project in XCode.
+- Open your app's root directory in Finder and go to `node_modules/ssas-enketo`
+- Drag and drop www folder to your XCode project. (As a reference. Don't copy)
+
+
+##### 5. Integrating SSAS App Core with your React Native App
 
 Rest of the documentation: WIP
