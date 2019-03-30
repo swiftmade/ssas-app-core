@@ -19,7 +19,19 @@ App core contains `React Native` code shared across apps that work in tandem wit
 > Note: App Core is designed to work with React Native v0.59+.
 
 1. Create a new React Native project.
-2. Add this package as a dependency: `yarn add ssas-app-core`
-3. Link this package: `react-native link ssas-app-core`
+2. You must have these packages installed and linked:
+
+```js
+{
+    "react-native-fs": "^2.13.3",
+    "react-native-message-bar": "^2.0.10",
+    "react-native-vector-icons": "^6.4.2",
+    "react-native-webview": "^5.4.6",
+    "react-native-zip-archive": "^4.0.0",
+    "react-navigation": "^1.5.8"
+}
+```
+
+3. Add this package as a dependency: `yarn add ssas-app-core`
 
 Rest of the documentation: WIP

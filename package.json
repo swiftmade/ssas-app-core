@@ -5,5 +5,15 @@
   "main": "index.js",
   "repository": "https://github.com/swiftmade/ssas-app-core",
   "author": "Imagins",
-  "license": "GNU General Public License v3.0"
+  "license": "GPL-3.0-or-later",
+  "peerDependencies": {
+    "react": "16.8.3",
+    "react-native": "^0.59.0",
+    "react-native-fs": "^2.13.3",
+    "react-native-message-bar": "^2.0.10",
+    "react-native-vector-icons": "^6.4.2",
+    "react-native-webview": "^5.4.6",
+    "react-native-zip-archive": "^4.0.0",
+    "react-navigation": "^1.5.8"
+  }
 }
