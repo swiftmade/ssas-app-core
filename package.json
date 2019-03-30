@@ -7,6 +7,9 @@
   "author": "Imagins",
   "license": "GPL-3.0-or-later",
   "peerDependencies": {
+    "@react-native-community/async-storage": "^1.2.1",
+    "axios": "^0.18.0",
+    "native-base": "^2.3.10",
     "react": "16.8.3",
     "react-native": "^0.59.0",
     "react-native-fs": "^2.13.3",

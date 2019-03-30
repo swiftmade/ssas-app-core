@@ -1,4 +1,3 @@
-import * as _ from 'lodash'
 import RNFS from 'react-native-fs'
 import { Platform } from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage';
@@ -68,7 +67,10 @@ class Session {
     }
 
     get(key, def = null) {
-        return _.get(this.session, key, def)
+        if ((typeof this.session[key]) === 'undefined') {
+            return def
+        }
+        return this.session[key]
     }
 
     async login(credentials) {

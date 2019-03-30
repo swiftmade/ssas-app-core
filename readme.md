@@ -23,12 +23,15 @@ App core contains `React Native` code shared across apps that work in tandem wit
 
 ```js
 {
+    "@react-native-community/async-storage": "^1.2.1",
+    "axios": "^0.18.0",    
+    "native-base": "^2.3.10",    
     "react-native-fs": "^2.13.3",
     "react-native-message-bar": "^2.0.10",
     "react-native-vector-icons": "^6.4.2",
     "react-native-webview": "^5.4.6",
     "react-native-zip-archive": "^4.0.0",
-    "react-navigation": "^1.5.8"
+    "react-navigation": "^1.5.8",
 }
 ```
 
