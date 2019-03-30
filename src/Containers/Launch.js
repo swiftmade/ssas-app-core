@@ -8,11 +8,11 @@ import {
     ProgressBarAndroid,
 } from 'react-native'
 
-import Text from '../Components/Text'
-import Images from '../Constants/Images'
-import Container from '../Components/Container'
+import AppCore from '../AppCore';
+import LaunchFlow from '../Flows/LaunchFlow';
 
-import LaunchFlow from '../Flows/LaunchFlow'
+import Text from '../Components/Text';
+import Container from '../Components/Container';
 
 class Launch extends Component {
 
@@ -32,7 +32,7 @@ class Launch extends Component {
     render() {
         return (
             <Container center>
-                <Image source={Images.ssas} />
+                <Image source={AppCore.get('defaultLaunchLogo')} />
                 {this._renderProgress()}
             </Container>
         );
