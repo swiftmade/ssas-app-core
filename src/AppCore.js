@@ -19,6 +19,11 @@ const DEFAULTS = {
    * To use it, pass a string that will replace %domain% variable in endpoint url.
    */
   "domainLock": null,
+
+  /**
+   * Turn off survey validation. Useful for testing purposes.
+   */
+  validationOff: false
 }
 
 class AppCore {

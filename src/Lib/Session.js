@@ -116,7 +116,7 @@ const deepGet = (object, path, def = null) => {
     let segments = path.split('.')
     for (let i = 0; i < segments.length; i++) {
         let segment = segments[i]
-        if (typeof object !== 'object' || !object.hasOwnProperty(segment)) {
+        if (object == null || (typeof object !== 'object') || !object.hasOwnProperty(segment)) {
             return def
         }
         object = object[segment]

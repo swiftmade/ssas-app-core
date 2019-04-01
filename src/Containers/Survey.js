@@ -4,6 +4,8 @@ import Files from "../Lib/Files"
 import Session from "../Lib/Session"
 import HtmlView from "../Components/HtmlView"
 
+import AppCore from '../AppCore'
+
 class Survey extends Component
 {
     getSource() {
@@ -14,7 +16,10 @@ class Survey extends Component
             assets: Files.assetsPath(),
             db: Session.get("domain"),
             bg: Session.bgPath(),
-            //novalidate: true,
+        }
+
+        if (AppCore.get('validationOff')) {
+            params.novalidate = true
         }
 
         // Exception: turn off jump to button for FijiFSP
