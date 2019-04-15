@@ -3,7 +3,6 @@ import { Platform } from 'react-native'
 import AsyncStorage from '@react-native-community/async-storage';
 
 import Api from './Api'
-import Themes from '../Constants/Themes'
 
 const sessionKey = '@SSAS:Session'
 
@@ -87,13 +86,6 @@ class Session {
 
     async logout() {
         await this.update({auth: null})
-    }
-
-    getTheme() {
-		if (['philippines', 'pddna'].includes(this.get('domain'))) {
-		    return Themes.philippines
-		}
-		return Themes.default
     }
 
     bgPath() {

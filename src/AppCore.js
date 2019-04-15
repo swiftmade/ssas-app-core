@@ -1,4 +1,8 @@
+import Themes from './Constants/Themes'
+
 const DEFAULTS = {
+
+  "theme": Themes.default,
 
   "navigation": require('./App/Navigation').default,
 

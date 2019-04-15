@@ -113,7 +113,7 @@ class Menu extends Component {
 
 	renderMenu() {
 
-		const {background} = Session.getTheme()
+		const {background} = AppCore.get('theme')
 		
 		return <Container style={{backgroundColor:'white'}}>
 			<Header style={{backgroundColor:'white', alignItems:'center'}}>
@@ -158,7 +158,7 @@ class Menu extends Component {
 	}
 
 	_renderButtons() {
-		const {buttonStyles} = Session.getTheme()
+		const {buttonStyles} = AppCore.get('theme')
 		const titles = this._buttonTitles()
 		return <View style={styles.buttons}>
 			<Button menu theme={buttonStyles.primary} title={titles.NEW} icon="plus" onPress={this.newSubmission} />
