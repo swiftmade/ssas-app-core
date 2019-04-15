@@ -15,7 +15,7 @@ class Upload extends Component
     }
 
     queryParams() {
-        const params = {
+        let params = {
             db: Session.get("domain"),
             submit: "openrosa/submissions",
             base: Session.get("settings.url"),
@@ -28,7 +28,7 @@ class Upload extends Component
         }
 
         if (AppCore.has('extendUploadParams')) {
-            params = AppCore.get('extendUploadParams')(params)
+            params = AppCore.get('extendUploadParams')(params, this.props)
         }
         
         return params

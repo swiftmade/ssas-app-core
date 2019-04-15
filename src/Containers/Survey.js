@@ -10,7 +10,7 @@ class Survey extends Component
 {
     getSource() {
 
-        const params = {
+        let params = {
             lang: "en",
             survey: Files.surveyJson(),
             assets: Files.assetsPath(),

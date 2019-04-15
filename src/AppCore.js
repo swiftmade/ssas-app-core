@@ -60,7 +60,7 @@ class AppCore {
   }
 
   has(key) {
-    return this.get(key) !== null
+    return this.get(key) !== undefined
   }
 }
 
