@@ -23,14 +23,14 @@ class Survey extends Component
         }
 
         if (AppCore.has('extendSurveyParams')) {
-            params = AppCore.get('extendSurveyParams')(params)
+            params = AppCore.get('extendSurveyParams')(params, this.props)
         }
 
         const baseUri = Files.wwwFolder()
         const uri = baseUri + "/survey.html?" + Query(params);
 
         return { uri, baseUri }
-    }    
+    }
 
     render() {
         return <HtmlView navigation={this.props.navigation} source={this.getSource()} sensitive />

@@ -34,11 +34,11 @@ const DEFAULTS = {
 
 
   /*
-  extendSurveyParams: (params) => { ...modify and return the params... }
+  extendSurveyParams: (params, props) => { ...modify and return the params... }
   */
 
   /*
-  extendUploadParams: (params) => { ...modify and return the params... }
+  extendUploadParams: (params, props) => { ...modify and return the params... }
   */ 
 }
 
