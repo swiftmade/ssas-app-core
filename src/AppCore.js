@@ -1,4 +1,7 @@
 const DEFAULTS = {
+
+  "navigation": require('./App/Navigation').default,
+
   /**
    * During launch, this logo will be used if a downloaded logo is not present.
    */
@@ -23,7 +26,16 @@ const DEFAULTS = {
   /**
    * Turn off survey validation. Useful for testing purposes.
    */
-  validationOff: false
+  "validationOff": false,
+
+
+  /*
+  extendSurveyParams: (params) => { ...modify and return the params... }
+  */
+
+  /*
+  extendUploadParams: (params) => { ...modify and return the params... }
+  */ 
 }
 
 class AppCore {

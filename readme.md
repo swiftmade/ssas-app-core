@@ -73,4 +73,21 @@ First, make sure your `android/app/src/main/AndroidManifest.xml` contains the fo
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
+**Optional: Enabling Debugging in Browser***
+
+If you want to debug the Enketo installation in Browser, you must configure `MainApplication.java` class appropriately.
+
+```java
+// Append to the beginning
+import android.webkit.WebView;
+
+// Then go to the onCreate method, make sure it looks like this:
+@Override
+public void onCreate() {
+    super.onCreate();
+    SoLoader.init(this, /* native exopackage */ false);
+    WebView.setWebContentsDebuggingEnabled(true);
+}
+```
+
 Rest of the documentation: WIP

@@ -25,6 +25,11 @@ class Upload extends Component
         if (token) {
             params['token'] = token
         }
+
+        if (AppCore.has('extendUploadParams')) {
+            params = AppCore.get('extendUploadParams')(params)
+        }
+        
         return params
     }
     

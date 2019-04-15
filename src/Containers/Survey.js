@@ -22,6 +22,10 @@ class Survey extends Component
             params.novalidate = true
         }
 
+        if (AppCore.has('extendSurveyParams')) {
+            params = AppCore.get('extendSurveyParams')(params)
+        }
+
         // Exception: turn off jump to button for FijiFSP
         if (Session.get('domain') === 'fijifsp') {
             params.jumpto = 'off'

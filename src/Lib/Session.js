@@ -90,7 +90,7 @@ class Session {
     }
 
     getTheme() {
-		if (this.get('domain') === 'philippines') {
+		if (['philippines', 'pddna'].includes(this.get('domain'))) {
 		    return Themes.philippines
 		}
 		return Themes.default

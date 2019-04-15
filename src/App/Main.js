@@ -2,7 +2,7 @@ import {View} from 'react-native'
 import React, {Component} from 'react'
 import {MessageBar, MessageBarManager} from 'react-native-message-bar'
 
-import Navigation from './Navigation'
+import AppCore from '../AppCore'
 
 export default class Main extends Component
 {
@@ -19,6 +19,7 @@ export default class Main extends Component
     }
 
     render() {
+        const Navigation = AppCore.get('navigation')
         return <View style={{flex:1}}>
             <Navigation />
             <MessageBar ref="alert" />
