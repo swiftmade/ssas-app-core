@@ -26,12 +26,6 @@ class Survey extends Component
             params = AppCore.get('extendSurveyParams')(params)
         }
 
-        // Exception: turn off jump to button for FijiFSP
-        if (Session.get('domain') === 'fijifsp') {
-            params.jumpto = 'off'
-            params.title = 'off'
-        }
-
         const baseUri = Files.wwwFolder()
         const uri = baseUri + "/survey.html?" + Query(params);
 
