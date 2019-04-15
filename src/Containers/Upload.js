@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
-import Files from '../Lib/Files'
-import Session from "../Lib/Session";
-import Query from "../Lib/Query";
-import HtmlView from '../Components/HtmlView'
 
+import AppCore from '../AppCore'
+import Files from '../Lib/Files'
+import Query from "../Lib/Query"
+import Session from "../Lib/Session"
+import HtmlView from '../Components/HtmlView'
 
 class Upload extends Component
 {   
