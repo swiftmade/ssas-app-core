@@ -55,6 +55,13 @@ class Menu extends Component {
 		})
 	}
 
+	componentDidMount() {
+		if (this.props.navigation.state.params && this.props.navigation.state.params.message) {
+			const {message_type, message} = this.props.navigation.state.params.message
+			Alerts.show(message_type, message)
+		}
+	}	
+
 	newSubmission() {
 		this.props.navigation.navigate('Survey', {title: 'New Submission'})
 	}

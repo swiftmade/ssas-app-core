@@ -1,5 +1,7 @@
 import {Alert} from 'react-native'
 import React, {Component} from 'react'
+import querystring from 'query-string'
+import {NavigationActions} from 'react-navigation'
 import {Platform, View, BackHandler} from 'react-native'
 
 import CustomWebview from './CustomWebview'
@@ -23,11 +25,27 @@ class HtmlView extends Component
         return !this.props.hasOwnProperty('allowBackButton')
     }
 
-
     _handleStateChange({nativeEvent}) {
         if (nativeEvent.url && nativeEvent.url.indexOf('/index.html') >= 0) {
-            this.props.navigation.goBack(null)
+            const message = this._extractMessageFromUrl(nativeEvent.url)
+            this.props.navigation.dispatch(
+                NavigationActions.reset({
+                    index: 0,
+                    actions: [NavigationActions.navigate({routeName: "Menu", params: {
+                        message
+                    }})],
+                })
+            )
         }
+    }
+
+    _extractMessageFromUrl(url) {
+        const query = url.substr(url.indexOf("?") + 1, url.length)
+        const params = querystring.parse(query)
+        if (!params.message) {
+            return null
+        }
+        return params
     }
     
     async confirmLeave() {
