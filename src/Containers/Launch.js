@@ -8,7 +8,7 @@ import {
     ProgressBarAndroid,
 } from 'react-native'
 
-import AppCore from '../AppCore';
+import {AppCore} from '../'
 import LaunchFlow from '../Flows/LaunchFlow';
 
 import Text from '../Components/Text';

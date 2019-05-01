@@ -12,7 +12,7 @@ import {NavigationActions} from 'react-navigation'
 
 import {Container, Content, Header, Footer} from 'native-base'
 
-import AppCore from '../AppCore'
+import {AppCore} from '../'
 import CurrentUser from '../Components/CurrentUser'
 
 class Menu extends Component {

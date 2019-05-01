@@ -8,7 +8,7 @@ import {
 import React, { Component } from "react";
 import {NavigationActions} from 'react-navigation';
 
-import AppCore from "../AppCore";
+import {AppCore} from "../";
 import Alerts from "../Lib/Alerts";
 import Text from "../Components/Text";
 import Colors from "../Constants/Colors";

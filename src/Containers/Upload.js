@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import AppCore from '../AppCore'
+import {AppCore} from '../'
 import Files from '../Lib/Files'
 import Query from "../Lib/Query"
 import Session from "../Lib/Session"

@@ -2,7 +2,7 @@ import axios from "axios";
 import RNFS from "react-native-fs";
 
 import Session from "./Session";
-import AppCore from "../AppCore";
+import {AppCore} from "../";
 
 class Api {
     

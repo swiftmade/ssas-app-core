@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Image, StyleSheet} from 'react-native';
 
-import AppCore from "../AppCore";
+import {AppCore} from "../";
 import Images from "../Constants/Images";
 
 class PortalLogo extends Component

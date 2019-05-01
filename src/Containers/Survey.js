@@ -4,7 +4,7 @@ import Files from "../Lib/Files"
 import Session from "../Lib/Session"
 import HtmlView from "../Components/HtmlView"
 
-import AppCore from '../AppCore'
+import {AppCore} from '../'
 
 class Survey extends Component
 {

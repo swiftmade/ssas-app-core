@@ -2,7 +2,7 @@ import {View} from 'react-native'
 import React, {Component} from 'react'
 import {MessageBar, MessageBarManager} from 'react-native-message-bar'
 
-import AppCore from '../AppCore'
+import {AppCore} from '../'
 
 export default class Main extends Component
 {
