@@ -21,7 +21,7 @@ export default class Main extends Component
     render() {
         const Navigation = AppCore.get('navigation')
         return <View style={{flex:1}}>
-            <Navigation />
+            <Navigation ref={nav => this.navigator = nav._navigation} />
             <MessageBar ref="alert" />
         </View>
     }
