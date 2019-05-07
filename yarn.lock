@@ -21,10 +21,10 @@ split-on-first@^1.0.0:
   resolved "https://registry.yarnpkg.com/split-on-first/-/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
   integrity sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==
 
-ssas-enketo@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/ssas-enketo/-/ssas-enketo-2.0.8.tgz#7116404d0afd1715a14ece59827867f8712f3ae7"
-  integrity sha512-sZygKd3BmZSm3wJEebjciuaau+5vV/WaALuAMQr5HwfN3KNIIQ+f2F+zyg/kD5dCicHcJeeEHfhNghYC1Ui3QQ==
+ssas-enketo@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/ssas-enketo/-/ssas-enketo-2.0.9.tgz#62dfa7ac031fee65cb6566afed298ecf3f442a90"
+  integrity sha512-9jTZQYTcCYSiykxns8Rc2E9LSWFKy9oOpl6+woKdojPL988q+0fPNKTENxtt4lU/TyBxulSCbu/jnH7FnRrAMA==
 
 strict-uri-encode@^2.0.0:
   version "2.0.0"
