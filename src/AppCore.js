@@ -17,5 +17,6 @@ export default class AppCore {
 
   has(key) {
     return this.get(key) !== undefined
+      && this.get(key) !== null
   }
 }
