@@ -1,6 +1,6 @@
 {
   "name": "ssas-app-core",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Core package for SSAS mobile apps",
   "main": "src/index.js",
   "repository": "https://github.com/swiftmade/ssas-app-core",
