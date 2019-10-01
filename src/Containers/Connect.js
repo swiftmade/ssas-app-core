@@ -16,6 +16,8 @@ import Button from "../Components/Button";
 import ConnectFlow from "../Flows/ConnectFlow";
 import Container from "../Components/Container";
 
+import I18n from "../Utils/i18n";
+
 class Connect extends Component
 {
     constructor(props) {
@@ -98,7 +100,7 @@ class Connect extends Component
         if (this.state.busy) {
             return <ActivityIndicator size="large" color={Colors.darkBlue} style={styles.indicator} />
         }
-        return <Button login title="Connect" onPress={() => this.connect(this.state.domain)} />
+        return <Button login title={I18n.t("connect")} onPress={() => this.connect(this.state.domain)} />
     }    
 }
 
