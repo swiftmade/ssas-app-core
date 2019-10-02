@@ -38,7 +38,7 @@ class Menu extends Component {
 
 	componentWillMount() {
 		this.setState({
-			title: Session.get("settings.title.en", `${I18n.t("ssasPortal")}`),
+			title: Session.get("settings.title.en", I18n.t("ssasPortal")),
 			version: Session.get('survey.version'),
 		})
 
@@ -65,11 +65,11 @@ class Menu extends Component {
 	}	
 
 	newSubmission() {
-		this.props.navigation.navigate('Survey', {title: `${I18n.t("newSubmission")}`})
+		this.props.navigation.navigate('Survey', {title: I18n.t("newSubmission")})
 	}
 
 	uploadSubmissions() {
-		this.props.navigation.navigate('Upload', {title: `${I18n.t("uploadSubmissions")}`})
+		this.props.navigation.navigate('Upload', {title: I18n.t("uploadSubmissions")})
 	}
 
 	async checkForUpdates() {
@@ -85,7 +85,7 @@ class Menu extends Component {
 			await Session.update(preserve)
 			this.reset()
 		} catch(error) {
-			Alerts.error("Oops", error.toString());
+			Alerts.error(I18n.t("oops"), error.toString());
 			this.setState({ updating: false });
 		}
 	}
@@ -178,13 +178,13 @@ class Menu extends Component {
 
 	_buttonTitles() {
 		const titles = {
-			NEW: `${I18n.t("newSubmission")}`,
-			UPLOAD: `${I18n.t("uploadSubmissions")}`,
-			UPDATE: `${I18n.t("checkForUpdates")}`,
+			NEW: I18n.t("newSubmission"),
+			UPLOAD: I18n.t("uploadSubmissions"),
+			UPDATE: I18n.t("checkForUpdates"),
 		}
 		if (Session.get('domain') === 'fijifsp') {
-			titles.NEW = `${I18n.t("startOurPlan")}`
-			titles.UPLOAD = `${I18n.t("uploadOurPlan")}`
+			titles.NEW = I18n.t("startOurPlan")
+			titles.UPLOAD = I18n.t("uploadOurPlan")
 		}
 		return titles
 	}

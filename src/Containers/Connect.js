@@ -37,7 +37,7 @@ class Connect extends Component
     async connect(domain) {
 
         if ( ! domain.trim()) {
-            Alerts.error('Domain is empty', 'Please enter your domain before pressing connect.')
+            Alerts.error(I18n.t("domainEmpty"), I18n.t("enterDomain"))
             return
         }        
 
@@ -52,7 +52,7 @@ class Connect extends Component
                 })
             )
         } catch (error) {
-            Alerts.error('Oops', error.toString())
+            Alerts.error(I18n.t("oops"), error.toString())
             // TODO: Show error
             this.setState({busy: false})
         }

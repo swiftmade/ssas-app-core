@@ -1,3 +1,27 @@
 export default {
-    connect: "З'єднатися"
+    connect: "З'єднатися",
+    downloading: "Завантаження ...",
+    loginTo: "Увійти в ",
+    email: "емейл",
+    password: "пароль",
+    doNotLogin: "Не входити",
+    ssasPortal: "Портал самооцінки шкільної безпеки",
+    newSubmission: "Нове подання",
+    uploadSubmissions: "Завантажити матеріали",
+    signOut: "Вийти",
+    signIn: "Увійти",
+    surveyVersion: "Огляд версії: ",
+    otherDomain: "Підключення до іншого домену",
+    checkForUpdates: "Перевірка на оновлення",
+    startOurPlan: "Почніть наш план",
+    uploadOurPlan: "Завантажте наш план",
+    updating: "Оновлення...",
+    wantToLeave: "Ви справді хочете піти?",
+    exitNow: "Будь-який незбережений прогрес буде ВЗАЄМО. Хочете вийти зараз?",
+    leave: "Так, піти",
+    cancel: "Скасувати",
+    guest: "Гість",
+    domainEmpty: "Домен порожній",
+    enterDomain: "Будь ласка, введіть свій домен, перш ніж натиснути з'єднання.",
+    oops: "Помилка"
 };

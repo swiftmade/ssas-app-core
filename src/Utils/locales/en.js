@@ -19,5 +19,9 @@ export default {
     wantToLeave: "Do you really want to leave?",
     exitNow: "Any unsaved progress will be LOST. Do you want to exit now?",
     leave: "Yes, Leave",
-    cancel: "Cancel"
+    cancel: "Cancel",
+    guest: "Guest",
+    domainEmpty: "Domain is empty",
+    enterDomain: "Please enter your domain before pressing connect.",
+    oops: "Oops"
 };

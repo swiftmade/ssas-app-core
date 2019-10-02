@@ -56,11 +56,11 @@ class HtmlView extends Component
 
         const promise = new Promise((resolve, reject) => {
         Alert.alert(
-          `${I18n.t("wantToLeave")}`,
-          `${I18n.t("exitNow")}`,
+          I18n.t("wantToLeave"),
+          I18n.t("exitNow"),
           [
-            { text: `${I18n.t("leave")}`, onPress: () => {resolve(true); this.props.navigation.goBack(null)} },
-            { text: `${I18n.t("cancel")}`, onPress: () => {resolve(false)}, style: "cancel" }
+            { text: I18n.t("leave"), onPress: () => {resolve(true); this.props.navigation.goBack(null)} },
+            { text: I18n.t("cancel"), onPress: () => {resolve(false)}, style: "cancel" }
           ],
           { cancelable: true }
         );

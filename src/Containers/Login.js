@@ -41,7 +41,7 @@ class Login extends Component
         try {
             await Session.login(this.getCredentials())
         } catch(error) {
-            Alerts.error('Oops', error.toString())
+            Alerts.error(I18n.t("oops"), error.toString())
             this.setState({busy: false})
             return
         }

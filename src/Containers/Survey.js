@@ -6,12 +6,14 @@ import HtmlView from "../Components/HtmlView"
 
 import {AppCore} from '../'
 
+import I18n from "../Utils/i18n";
+
 class Survey extends Component
 {
     getSource() {
 
         let params = {
-            lang: "en",
+            lang: I18n.locale,
             survey: Files.surveyJson(),
             assets: Files.assetsPath(),
             db: Session.get("domain"),
