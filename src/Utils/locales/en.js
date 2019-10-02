@@ -1,3 +1,23 @@
 export default {
-    connect: "Connect 1"
+    connect: "Connect",
+    downloading: "Downloading ...",
+    loginTo: "Login to ",
+    email: "email",
+    password: "password",
+    doNotLogin: "Don't Login",
+    ssasPortal: "School Safety Self-Assessment Portal",
+    newSubmission: "New Submission",
+    uploadSubmissions: "Upload Submissions",
+    signOut: "Sign Out",
+    signIn: "Sign In",
+    surveyVersion: "Survey version: ",
+    otherDomain: "Connect to other domain",
+    checkForUpdates: "Check for Updates",
+    startOurPlan: "Start our Plan",
+    uploadOurPlan: "Upload our Plan",
+    updating: "Updating...",
+    wantToLeave: "Do you really want to leave?",
+    exitNow: "Any unsaved progress will be LOST. Do you want to exit now?",
+    leave: "Yes, Leave",
+    cancel: "Cancel"
 };

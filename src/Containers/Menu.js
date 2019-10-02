@@ -15,6 +15,8 @@ import {Container, Content, Header, Footer} from 'native-base'
 import {AppCore} from '../'
 import CurrentUser from '../Components/CurrentUser'
 
+import I18n from "../Utils/i18n";
+
 class Menu extends Component {
 
 	constructor(props) {
@@ -36,7 +38,7 @@ class Menu extends Component {
 
 	componentWillMount() {
 		this.setState({
-			title: Session.get("settings.title.en", "School Safety Self-Assessment Portal"),
+			title: Session.get("settings.title.en", `${I18n.t("ssasPortal")}`),
 			version: Session.get('survey.version'),
 		})
 
@@ -63,11 +65,11 @@ class Menu extends Component {
 	}	
 
 	newSubmission() {
-		this.props.navigation.navigate('Survey', {title: 'New Submission'})
+		this.props.navigation.navigate('Survey', {title: `${I18n.t("newSubmission")}`})
 	}
 
 	uploadSubmissions() {
-		this.props.navigation.navigate('Upload', {title: 'Upload Submissions'})
+		this.props.navigation.navigate('Upload', {title: `${I18n.t("uploadSubmissions")}`})
 	}
 
 	async checkForUpdates() {
@@ -113,9 +115,9 @@ class Menu extends Component {
 
 	renderAuthButton() {
 		if (Session.isAuthenticated()) {
-			return  <Button link title="Sign Out" icon="sign-out" style={styles.exitButton} onPress={this.logout} />
+			return <Button link title={I18n.t("signOut")} icon="sign-out" style={styles.exitButton} onPress={this.logout} />
 		}
-		return <Button link title="Sign In" icon="sign-in" style={styles.exitButton} onPress={this.login} />
+		return <Button link title={I18n.t("signIn")} icon="sign-in" style={styles.exitButton} onPress={this.login} />
 	}
 
 	renderMenu() {
@@ -150,7 +152,7 @@ class Menu extends Component {
 			</ImageBackground>
 			<Footer style={{backgroundColor: 'white', flexDirection:'column', alignItems:'center'}}>
 				<Text style={styles.footerText}>
-					Survey version: {this.state.version}
+					{I18n.t("surveyVersion")}{this.state.version}
 				</Text>
 				{this._renderExitButton()}
 			</Footer>
@@ -161,7 +163,7 @@ class Menu extends Component {
 		if (AppCore.has('domainLock')) {
 			return null
 		}
-		return <Button link title="Connect to other domain" icon="chevron-circle-left" style={styles.exitButton} onPress={this.exit} />
+		return <Button link title={I18n.t("otherDomain")} icon="chevron-circle-left" style={styles.exitButton} onPress={this.exit} />
 	}
 
 	_renderButtons() {
@@ -176,13 +178,13 @@ class Menu extends Component {
 
 	_buttonTitles() {
 		const titles = {
-			NEW: 'New Submission',
-			UPLOAD: 'Upload Submissions',
-			UPDATE: 'Check for Updates',
+			NEW: `${I18n.t("newSubmission")}`,
+			UPLOAD: `${I18n.t("uploadSubmissions")}`,
+			UPDATE: `${I18n.t("checkForUpdates")}`,
 		}
 		if (Session.get('domain') === 'fijifsp') {
-			titles.NEW = 'Start our Plan'
-			titles.UPLOAD = 'Upload our Plan'
+			titles.NEW = `${I18n.t("startOurPlan")}`
+			titles.UPLOAD = `${I18n.t("uploadOurPlan")}`
 		}
 		return titles
 	}
@@ -191,7 +193,7 @@ class Menu extends Component {
 		return <Container>
 			<Content contentContainerStyle={{ alignItems:'center', padding:16}}>
 				<ActivityIndicator size="large" color={Colors.darkBlue} style={{ marginTop: 15 }} />
-				<Text>Updating...</Text>
+				<Text>{I18n.t("updating")}</Text>
 			</Content>
 		</Container>
 	}
