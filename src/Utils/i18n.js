@@ -1,7 +1,7 @@
 import I18n from "i18n-js";
 import * as RNLocalize from "react-native-localize";
 import en from "./locales/en";
-import la from "./locales/la";
+import lo from "./locales/lo";
 import uk from "./locales/uk";
 
 I18n.defaultLocale = "en";
@@ -14,7 +14,7 @@ if (Array.isArray(locales)) {
 
 I18n.translations = {
   en,
-  la,
+  lo,
   uk
 };
 
