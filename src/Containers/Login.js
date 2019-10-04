@@ -9,6 +9,8 @@ import Session from '../Lib/Session'
 import Alerts from '../Lib/Alerts'
 import {NavigationActions} from 'react-navigation'
 
+import I18n from "../Utils/i18n";
+
 import {
   Image,
   TextInput,
@@ -39,7 +41,7 @@ class Login extends Component
         try {
             await Session.login(this.getCredentials())
         } catch(error) {
-            Alerts.error('Oops', error.toString())
+            Alerts.error(I18n.t("oops"), error.toString())
             this.setState({busy: false})
             return
         }
@@ -77,11 +79,11 @@ class Login extends Component
 
         return <Container center>
             <PortalLogo />
-            <Text title>Login to { instanceName }</Text>
+            <Text title>{I18n.t("loginTo")}{ instanceName }</Text>
 
             <View style={[styles.inputWrapper, {marginTop:16}]}>
 
-              <Text style={styles.label}>email</Text>
+                <Text style={styles.label}>{I18n.t("email")}</Text>
               
               <TextInput editable={!this.state.busy}
               value={this.state.email}
@@ -98,7 +100,7 @@ class Login extends Component
             </View>
             <View style={[styles.inputWrapper, {marginBottom:32}]}>
 
-              <Text style={styles.label}>password</Text>
+                <Text style={styles.label}>{I18n.t("password")}</Text>
               
               <TextInput editable={!this.state.busy}
               value={this.state.password}
@@ -107,7 +109,7 @@ class Login extends Component
               placeholderTextColor="rgba(0,0,0,0.5)"
               underlineColorAndroid="transparent"
               secureTextEntry={true}
-              placeholder="password"
+              placeholder={I18n.t("password")}
               autoCapitalize="none"
               autoCorrect={false}
               spellCheck={false} />
@@ -122,7 +124,7 @@ class Login extends Component
         if (this.state.busy) {
             return <ActivityIndicator size="large" color={Colors.darkBlue} style={{marginTop:15}} />
         }
-        return <Button login title="Connect" onPress={this.login} />
+        return <Button login title={I18n.t("connect")} onPress={this.login} />
     }
 
     renderCancelButton() {
@@ -133,7 +135,7 @@ class Login extends Component
             }
         } catch(e) {}
         
-        return <Button link title="Don't Login" onPress={() => {
+        return <Button link title={I18n.t("doNotLogin")} onPress={() => {
             optional ? this.reset() : this.restart()
         }} />
     }

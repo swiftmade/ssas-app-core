@@ -14,6 +14,8 @@ import LaunchFlow from '../Flows/LaunchFlow';
 import Text from '../Components/Text';
 import Container from '../Components/Container';
 
+import I18n from "../Utils/i18n";
+
 class Launch extends Component {
 
     constructor(props) {
@@ -43,7 +45,7 @@ class Launch extends Component {
             return null
         }
         return <View>
-            <Text style={styles.loadingText}>Downloading... ({(this.state.progress * 100).toFixed(3)}%)</Text>
+            <Text style={styles.loadingText}>{I18n.t("downloading")}({(this.state.progress * 100).toFixed(3)}%)</Text>
             {this._renderProgressBar()}
         </View>
     }

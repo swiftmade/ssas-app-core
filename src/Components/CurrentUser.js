@@ -5,11 +5,13 @@ import { View, Text} from "react-native";
 
 import Session from '../Lib/Session'
 
+import I18n from "../Utils/i18n";
+
 export default class extends Component {
 
     constructor(props) {
         super(props);
-        let name = 'Guest'
+        let name = I18n.t("guest") 
         if (Session.isAuthenticated()) {
             name = Session.get('auth.first_name') + ' ' + Session.get('auth.last_name')
         }
