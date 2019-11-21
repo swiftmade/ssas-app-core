@@ -23,6 +23,6 @@
     "i18n-js": "^3.3.0",
     "query-string": "^6.5.0",
     "react-native-localize": "^1.2.1",
-    "ssas-enketo": "^2.1.0"
+    "ssas-enketo": "^2.3.0"
   }
 }
