@@ -19,6 +19,9 @@ class Api {
             '%domain%',
             domain
         )
+        if (AppCore.get('useHttps')) {
+            this.baseUrl = this.baseUrl.replace('http://', 'https://')
+        }
         this._configure()
     }
 
