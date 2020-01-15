@@ -9,6 +9,8 @@ class Connectivity {
             this.firstResolver = resolve
         })
 
+        console.log(NetInfo)
+
         NetInfo.isConnected.addEventListener('connectionChange', (isConnected) => {
             this.isConnected = isConnected
             if ( ! this.firstChecked) {
