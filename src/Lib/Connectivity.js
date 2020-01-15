@@ -1,4 +1,4 @@
-import NetInfo from "@react-native-community/netinfo";
+import NetInfo, { NetInfoState} from "@react-native-community/netinfo";
 
 class Connectivity {
 
@@ -8,12 +8,12 @@ class Connectivity {
         this.waitFirst = new Promise((resolve) => {
             this.firstResolver = resolve
         })
+    }
 
-        console.log(NetInfo)
-
-        NetInfo.addEventListener('connectionChange', (isConnected) => {
-            this.isConnected = isConnected
-            if ( ! this.firstChecked) {
+    componentDidMount() {
+        NetInfo.addEventListener((state: NetInfoState) => {
+            this.isConnected = NetInfoState.isConnected
+            if (!this.firstChecked) {
                 this.firstResolver()
                 this.firstChecked = true
             }
