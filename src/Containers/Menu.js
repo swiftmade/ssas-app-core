@@ -36,7 +36,7 @@ class Menu extends Component {
 		this.uploadSubmissions = this.uploadSubmissions.bind(this)
 	}
 
-	componentWillMount() {
+	component() {
 		this.setState({
 			title: Session.get("settings.title.en", I18n.t("ssasPortal")),
 			version: Session.get('survey.version'),
