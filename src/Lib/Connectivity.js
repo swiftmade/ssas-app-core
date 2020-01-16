@@ -12,7 +12,9 @@ class Connectivity {
 
     componentDidMount() {
 
-        NetInfo.fetch();
+        NetInfo.fetch().then(state => {
+            console.log('Is connected?: ' + state.isConnected);
+        });
 
         NetInfo.addEventListener((state) => {
             this.isConnected = state.isConnected
@@ -20,6 +22,7 @@ class Connectivity {
                 this.firstResolver()
                 this.firstChecked = true
             }
+            console.log(state.isConnected);
         })
     }
 
